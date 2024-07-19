@@ -1,0 +1,80 @@
+ [
+   {
+     "name": "John",
+     "birthday": "1988-05-12",
+     "level": "Trainee",
+     "salary": 800
+   },
+   {
+     "name": "Bill",
+     "birthday": "1984-06-07",
+     "level": "Junior",
+     "salary": 1200
+   },
+   {
+     "name": "Geremy",
+     "birthday": "1995-02-21",
+     "level": "Junior",
+     "salary": 1500
+   },
+   {
+     "name": "Linda",
+     "birthday": "1988-05-20",
+     "level": "Middle",
+     "salary": 2000
+   },
+   {
+     "name": "Viki",
+     "birthday": "1991-07-08",
+     "level": "Middle",
+     "salary": 2500
+   },
+   {
+     "name": "Kast",
+     "birthday": "2000-01-27",
+     "level": "Middle",
+     "salary": 3000
+   },
+   {
+     "name": "Liza",
+     "birthday": "1992-10-15",
+     "level": "Middle",
+     "salary": 4000
+   },
+   {
+     "name": "Met",
+     "birthday": "2002-08-17",
+     "level": "Middle",
+     "salary": 4500
+   },
+   {
+     "name": "Steve",
+     "birthday": "1998-11-25",
+     "level": "Senior",
+     "salary": 5200
+   },
+   {
+     "name": "Sympthon",
+     "birthday": "1992-03-15",
+     "level": "Senior",
+     "salary": 8000
+   },
+   {
+     "name": "Spenser",
+     "birthday": "1987-01-26",
+     "level": "Senior",
+     "salary": 8000
+   },
+   {
+     "name": "Derik",
+     "birthday": "2002-08-17",
+     "level": "Junior",
+     "salary": 1600
+   },
+   {
+     "name": "Jack",
+     "birthday": "1984-06-07",
+     "level": "Senior",
+     "salary": 7600
+   }
+ ]
