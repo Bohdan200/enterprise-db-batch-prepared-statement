@@ -25,8 +25,7 @@ public class ClientsQueries {
                     Files.readAllLines(Paths.get(FIND_MAX_PROJECTS_CLIENT_SQL_FILE_PATH))
             );
 
-            PreparedStatement statement =  Database.getConnection().prepareStatement(sql);
-
+            PreparedStatement statement =  Database.getPreparedStatement(sql);
             ResultSet searchResult = statement.executeQuery();
 
             while(searchResult.next()) {
@@ -39,6 +38,7 @@ public class ClientsQueries {
         } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
+
         return maxProjectsClientList;
     }
 }

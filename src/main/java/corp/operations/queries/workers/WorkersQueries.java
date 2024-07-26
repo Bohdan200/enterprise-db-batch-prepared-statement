@@ -27,8 +27,7 @@ public class WorkersQueries {
                     Files.readAllLines(Paths.get(FIND_MAX_SALARY_WORKER_SQL_FILE_PATH))
             );
 
-            PreparedStatement statement =  Database.getConnection().prepareStatement(sql);
-
+            PreparedStatement statement =  Database.getPreparedStatement(sql);
             ResultSet searchResult = statement.executeQuery();
 
             while(searchResult.next()) {
@@ -41,6 +40,7 @@ public class WorkersQueries {
         } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
+
         return maxSalaryWorkerList;
     }
 
@@ -53,8 +53,7 @@ public class WorkersQueries {
                     Files.readAllLines(Paths.get(FIND_YOUNGEST_ELDEST_WORKERS_SQL_FILE_PATH))
             );
 
-            PreparedStatement statement =  Database.getConnection().prepareStatement(sql);
-
+            PreparedStatement statement =  Database.getPreparedStatement(sql);
             ResultSet searchResult = statement.executeQuery();
 
             while(searchResult.next()) {
@@ -68,6 +67,7 @@ public class WorkersQueries {
         } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
+
         return youngestAndEldestWorkersList;
     }
 }

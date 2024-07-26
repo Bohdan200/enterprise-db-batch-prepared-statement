@@ -37,8 +37,8 @@ public class DatabasePopulateProjectWorkerRelations {
             PreparedStatement statement = Database.getPreparedStatement("INSERT INTO project_worker (project_id, worker_id) VALUES (?, ?)");
 
             for (Project_Worker relation : relations) {
-                statement.setInt(1,relation.getProjectId());
-                statement.setInt(2, relation.getWorkerId());
+                statement.setInt(1,relation.getProject_id());
+                statement.setInt(2, relation.getWorker_id());
                 statement.addBatch();
             }
             statement.executeBatch();

@@ -22,7 +22,7 @@ public class DatabaseInitService {
                     Files.readAllLines(Paths.get(INIT_DB_SQL_FILE_PATH))
             );
 
-            Statement DBstatement = Database.getInstance().getStatement();
+            Statement DBstatement = Database.getStatement();
             String[] sqlParts = sqlAll.split("\n\n");
 
             for (String sql : sqlParts) {

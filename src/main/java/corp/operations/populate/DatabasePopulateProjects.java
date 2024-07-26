@@ -36,10 +36,10 @@ public class DatabasePopulateProjects {
             PreparedStatement statement = Database.getPreparedStatement("INSERT INTO project (client_id, project_name, start_date, finish_date) VALUES (?, ?, ?, ?)");
 
             for (Project project : projects) {
-                statement.setInt(1, project.getClientId());
-                statement.setString(2, project.getProjectName());
-                statement.setString(3, project.getStartDate());
-                statement.setString(4, project.getFinishDate());
+                statement.setInt(1, project.getClient_id());
+                statement.setString(2, project.getProject_name());
+                statement.setString(3, project.getStart_date());
+                statement.setString(4, project.getFinish_date());
                 statement.addBatch();
             }
             statement.executeBatch();

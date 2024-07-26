@@ -8,7 +8,6 @@ import corp.classes.Client;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import java.util.List;
@@ -31,12 +30,9 @@ public class DatabasePopulateClients {
                     List.class,
                     Client.class
             );
-
-
             List<Client> clients = new Gson().fromJson(json, typeToken.getType());
 
-            Connection connection = Database.getConnection();
-            PreparedStatement statement = connection.prepareStatement("INSERT INTO client (name) VALUES (?)");
+            PreparedStatement statement = Database.getPreparedStatement("INSERT INTO client (name) VALUES (?)");
 
             for (Client client : clients) {
                 statement.setString(1, client.getName());

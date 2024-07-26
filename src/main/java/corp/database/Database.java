@@ -21,11 +21,7 @@ public class Database {
         }
     }
 
-    public static Connection getConnection() {
-        return connection;
-    }
-
-    public Statement getStatement() throws SQLException {
+    public static Statement getStatement() throws SQLException {
         return connection.createStatement();
     }
 

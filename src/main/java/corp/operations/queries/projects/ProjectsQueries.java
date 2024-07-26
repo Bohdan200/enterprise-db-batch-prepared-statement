@@ -27,8 +27,7 @@ public class ProjectsQueries {
                     Files.readAllLines(Paths.get(FIND_LONGEST_PROJECT_SQL_FILE_PATH))
             );
 
-            PreparedStatement statement =  Database.getConnection().prepareStatement(sql);
-
+            PreparedStatement statement =  Database.getPreparedStatement(sql);
             ResultSet searchResult = statement.executeQuery();
 
             while(searchResult.next()) {
@@ -41,6 +40,7 @@ public class ProjectsQueries {
         } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
+
         return longestProjectList;
     }
 
@@ -53,8 +53,7 @@ public class ProjectsQueries {
                     Files.readAllLines(Paths.get(PRINT_PROJECT_PRICES_SQL_FILE_PATH))
             );
 
-            PreparedStatement statement =  Database.getConnection().prepareStatement(sql);
-
+            PreparedStatement statement =  Database.getPreparedStatement(sql);
             ResultSet searchResult = statement.executeQuery();
 
             while(searchResult.next()) {
@@ -67,6 +66,7 @@ public class ProjectsQueries {
         } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
+
         return projectPricesList;
     }
 }

@@ -1,7 +1,9 @@
 package corp.classes.query;
 
+import lombok.Getter;
 import java.time.LocalDate;
 
+@Getter
 public class SpecialWorker {
     private String name = "";
     private int salary = 0;
@@ -19,11 +21,4 @@ public class SpecialWorker {
         this.birthday = birthday;
     }
 
-    public String getName() { return name; }
-
-    public int getSalary() { return salary; }
-
-    public LocalDate getBirthday() { return birthday; }
-
-    public String getType() { return type; }
 }
