@@ -1,6 +1,6 @@
 package corp;
 
-import corp.operations.init.DatabaseInitService;
+import corp.database.Database;
 import corp.operations.populate.DatabasePopulateClients;
 import corp.operations.populate.DatabasePopulateProjectWorkerRelations;
 import corp.operations.populate.DatabasePopulateProjects;
@@ -9,7 +9,7 @@ import corp.operations.queries.DatabaseQueryService;
 
 public class App {
     public static void main(String[] args) {
-        DatabaseInitService.init();
+        Database database = Database.getInstance();
 
         DatabasePopulateClients.populate();
         DatabasePopulateProjects.populate();

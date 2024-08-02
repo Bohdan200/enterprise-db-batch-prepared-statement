@@ -14,7 +14,6 @@ public class Prefs {
     public static final String DB_JDBC_CONNECTION_URL = "dbUrl";
     public static final String DB_JDBC_CONNECTION_USER = "dbUser";
     public static final String DB_JDBC_CONNECTION_PASSWORD = "dbPass";
-    public static final String INIT_DB_SQL_FILE_PATH = "./sql/init_db.sql";
     public static final String POPULATE_DB_SQL_WORKERS_FILE_PATH = "./json/workers.json";
     public static final String POPULATE_DB_SQL_CLIENTS_FILE_PATH = "./json/clients.json";
     public static final String POPULATE_DB_SQL_PROJECTS_FILE_PATH = "./json/projects.json";
